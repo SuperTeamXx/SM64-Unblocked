@@ -1,4 +1,4 @@
-# You can now play Super Mario 64 UNBLOCKED!
+# You can now play Super Mario 64 [UNBLOCKED!](https://superteamxp.github.io/SM64-Unblocked/)
 
 This unblocked version is property of SuperTeamXP
 
