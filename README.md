@@ -1,6 +1,4 @@
-# SM64-Unblocked
-
-You can now play Super Mario 64 UNBLOCKED!
+# You can now play Super Mario 64 UNBLOCKED!
 
 This unblocked version is property of SuperTeamXP
 
