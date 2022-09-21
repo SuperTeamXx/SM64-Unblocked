@@ -1,76 +1,24 @@
-<!Doctype html>
-<html lang="en-us">
+<!DOCTYPE html>
+<html lang="en">
   <head>
     <meta charset="utf-8">
-    <meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+    <meta name="viewport" content="width=device-width">
     <title>Super Mario 64</title>
     <link rel="shortcut icon" href="logo.png">
-    <style>
-      body, html{
-        margin: 0;
-        padding: 0;
-        width: 100vw;
-        min-height: 100vh;
-        font-family: Arial, Helvetica, sans-serif;
-        color: white;
-        background-color: black;
-        image-rendering: pixelated;
-        scrollbar-width: none;
-      }
-      ::-webkit-scrollbar {
-        display: none;
-      }
-      #container {
-        width: 100vw;
-        height: 100vh;
-        display: flex;
-        align-items: center;
-        justify-content: center;
-      }
-      canvas {
-        width: 100vw;
-        height: 100vh;
-      }
-    </style>
+    <link href="style.css" rel="stylesheet" type="text/css" />
   </head>
   <body>
-    <div id="container">
-      <canvas class="emscripten" id="canvas"></canvas>
-    </div>
-    <script type='text/javascript'>
-      var Module = {
-        preRun: [],
-        postRun: [],
-        print: (function() {
-          return function(text) {
-            if (arguments.length > 1) text = Array.prototype.slice.call(arguments).join(' ');
-            console.log(text);
-          };
-        })(),
-        printErr: function(text) {
-          if (arguments.length > 1)
-            text = Array.prototype.slice.call(arguments).join(' ');
-          console.error(text);
-        },
-        canvas: (function() {
-          var canvas = document.getElementById('canvas');
-          canvas.width = window.innerWidth; // Todo: how to do this from c++
-          canvas.height = window.innerHeight;
-          canvas.addEventListener("webglcontextlost", function(e) {
-            alert('WebGL context lost. You will need to reload the page.');
-            e.preventDefault();
-          }, false);
-          return canvas;
-        })(),
-        setStatus: function(text) {
-        }
-      };
-    </script>
-    <script async type="text/javascript" src="sm64.us.f3dex2e.js"></script>
-    <script>
-    </script>
+    <div style="width:100vw;height:100vh;max-width:none;position:absolute;top:0px;left:0px;">
+        <div id="game"></div>
+      </div>
+<script type="text/javascript">
+    EJS_startOnLoaded = true;
+    EJS_gameID = 1;
+    EJS_player = '#game';
+    EJS_gameUrl = 'Super Mario 64.z64';
+    EJS_core = 'n64';
+    EJS_pathtodata = 'data/';
+</script>
+<script src="data/loader.js"></script>
   </body>
 </html>
-
-
-
